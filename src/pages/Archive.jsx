@@ -81,9 +81,9 @@ export function Archive() {
               Every house we have <span className="serif-i">quietly</span> handed over.
             </h1>
             <p>
-              EstateBrothers represents fewer than thirty mandates each year. What follows is the
-              complete record of residences we have transferred since 2021 - across Islamabad,
-              Lahore, and Karachi.
+              Estate Brothers supports buyers, sellers, and investors through trusted property
+              guidance, secure opportunities, and a growing network of real estate professionals
+              across Pakistan.
             </p>
           </div>
           <div className="meta">

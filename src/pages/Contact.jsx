@@ -20,7 +20,7 @@ export function Contact() {
     phone: "",
     message: "",
     intent: "Buying",
-    city: "Islamabad",
+    city: "Lahore",
   });
   const [sent, setSent] = useState(false);
 
@@ -41,17 +41,17 @@ export function Contact() {
       <section className="page-hd">
         <div className="wrap">
           <div className="l">
-            <div className="eyebrow">Contact · By referral</div>
-            <div className="mono page-note">Reply within 24 hours</div>
+            <div className="eyebrow">Contact · Estate Brothers</div>
+            <div className="mono page-note">Always open</div>
           </div>
           <div className="t">
             <h1>
               Begin a <span className="serif-i">private</span> conversation.
             </h1>
             <p>
-              EstateBrothers takes a small number of mandates each year. Tell us what you are
-              looking for - or what you are quietly considering selling - and one of the brothers
-              will respond personally.
+              Speak with our team for property services, investment guidance, buying, selling, or
+              valuation support. Estate Brothers is available 24/7 from our DHA Phase 6 Lahore
+              office and branch network.
             </p>
           </div>
         </div>
@@ -61,16 +61,16 @@ export function Contact() {
         <div className="wrap">
           <form className="form reveal" onSubmit={submit} noValidate>
             <p className="lead">
-              All inquiries are read by Hassan and Bilal directly. We do not use a CRM or call
-              centre.
+              Your trusted real estate partner for secure investments, smart opportunities, and
+              property decisions you can make with confidence.
             </p>
 
             {sent ? (
               <div className="success">
                 <div className="h">Thank you, {form.name.split(" ")[0]}.</div>
                 <p className="p">
-                  Your inquiry has been received. One of the brothers will reach out within one
-                  business day from a {form.city} number, between 10:00 and 19:00 PKT.
+                  Your inquiry has been received. A member of the Estate Brothers team will contact
+                  you from our {form.city} network as soon as possible.
                 </p>
                 <span className="ref">Reference · {ref}</span>
               </div>
@@ -136,7 +136,7 @@ export function Contact() {
 
                 <Field label="Tell us a little">
                   <textarea
-                    placeholder="A sector, a price range, an architect, or simply what kind of house you are after."
+                    placeholder="Tell us about the property, investment, location, price range, or service you need."
                     value={form.message}
                     onChange={(event) => set("message", event.target.value)}
                   />
@@ -148,8 +148,7 @@ export function Contact() {
                     <span className="arrow">→</span>
                   </button>
                   <span className="submit-note">
-                    We respond personally within one business day. Your details are never shared,
-                    listed, or marketed to.
+                    Always open. Your details are handled privately by the Estate Brothers team.
                   </span>
                 </div>
               </>
@@ -160,12 +159,14 @@ export function Contact() {
             <div className="aside-block">
               <h3>Speak with us</h3>
               <div className="v">
-                Hassan Hashmi <span className="serif-i">&amp;</span> Bilal Hashmi
+                Estate Brothers <span className="serif-i">Real Estate</span>
               </div>
               <div className="meta">
-                hello@estatebrothers.pk
+                estatebrothers786@gmail.com
                 <br />
-                +92 51 555 0117
+                0325 2222330
+                <br />
+                Instagram: estatebrothers1
               </div>
             </div>
 

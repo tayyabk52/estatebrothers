@@ -72,32 +72,32 @@ export const featuredProperties = [
 
 export const testimonials = [
   {
-    quote: "They walked the plot with us at sunrise and again at dusk before we made the offer. The first broker who treated a Kanal of land as a decision, not a transaction.",
+    quote: "Estate Brothers made the entire process feel secure, transparent, and properly guided. Their team understood both the property and the investment decision behind it.",
     name: "Faraz & Sana Sheikh",
-    role: "DHA Phase 6, Lahore - 2024",
+    role: "Lahore - 2024",
   },
   {
-    quote: "We had been looking in F-7 for two years. EstateBrothers waited eleven months for the right corner plot, then negotiated the entire deal in one afternoon.",
+    quote: "The advice was clear from day one. They helped us compare opportunities, avoid pressure, and move only when the numbers and location made sense.",
     name: "Dr. Mahnoor Qureshi",
-    role: "Sector F-7, Islamabad - 2023",
+    role: "Investment client - 2023",
   },
   {
-    quote: "When the architect changed, they re-photographed the entire portfolio. That quiet attention is what makes them different in this market.",
-    name: "Omar Shahid, AIAP",
-    role: "Principal, Shahid Architects",
+    quote: "Their market knowledge, documentation support, and follow-through gave us confidence through every stage of the transaction.",
+    name: "Omar Shahid",
+    role: "Property services client",
   },
 ];
 
 export const stats = [
-  { n: "212", unit: "+", l: "Residences placed since 2014" },
+  { n: "10", unit: "+ yrs", l: "Hands-on market experience" },
   { n: "38", unit: "d", l: "Median days, listing to offer" },
   { n: "96", unit: "%", l: "Closed within 4% of ask" },
-  { n: "3", unit: " cities", l: "Karachi · Lahore · Islamabad" },
+  { n: "4", unit: " branches", l: "Serving clients across Pakistan" },
 ];
 
 export const heroStats = [
   { n: "180", unit: "+", l: "Active mandates" },
-  { n: "12", unit: " yrs", l: "In partnership" },
-  { n: "1 Kanal", unit: "", l: "Minimum land standard" },
-  { n: "PKR 4-80", unit: " Cr", l: "Listing range" },
+  { n: "10", unit: "+ yrs", l: "Real estate experience" },
+  { n: "30", unit: "+", l: "Professional team members" },
+  { n: "24/7", unit: "", l: "Always open for clients" },
 ];

@@ -13,8 +13,8 @@ const footerColumns = [
   {
     h: "Practice",
     items: [
-      ["About the brothers", "", "/#about"],
-      ["Advisory & valuation", "", "/contact"],
+      ["About Estate Brothers", "", "/#about"],
+      ["Investment services", "", "/contact"],
       ["The journal", "", "/#journal"],
       ["Press & recognition", "", "/#"],
     ],
@@ -23,9 +23,9 @@ const footerColumns = [
     h: "Contact",
     items: [
       ["Private inquiry", "", "/contact"],
-      ["Islamabad - F-7", "", "/contact"],
-      ["Lahore - Gulberg V", "", "/contact"],
-      ["Karachi - Bath Island", "", "/contact"],
+      ["DHA Phase 6 Lahore", "", "/contact"],
+      ["Always open", "", "/contact"],
+      ["estatebrothers1", "", "/contact"],
     ],
   },
 ];
@@ -39,18 +39,18 @@ export function Footer() {
             Estate<span className="amp">&amp;</span>Brothers
           </div>
           <p>
-            Architecturally considered residences across Karachi, Lahore, and Islamabad -
-            represented by two brothers.
+            Trusted real estate partners delivering secure investments, smart opportunities, and
+            property decisions built with confidence.
           </p>
           <div className="addr">
-            12 Khayaban-e-Iqbal, F-7 Markaz
+            Top Floor 44-A Main DHA Office Phase 6
             <br />
-            Islamabad, 44000
+            Lahore, Pakistan, 54000
             <br />
             <br />
-            +92 51 555 0117
+            0325 2222330
             <br />
-            hello@estatebrothers.pk
+            estatebrothers786@gmail.com
           </div>
         </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
         ))}
 
         <div className="footer-bot">
-          <span>© 2026 EstateBrothers (Pvt.) Ltd · Licensed in Pakistan</span>
+          <span>© 2026 Estate Brothers · Real estate and investment services</span>
           <span>Set in Inter Tight &amp; Inter</span>
         </div>
       </div>

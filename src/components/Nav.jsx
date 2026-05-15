@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router";
 
 const links = [
   { to: "/#listings", label: "Residences", key: "residences", n: "04" },
-  { to: "/#about", label: "The Brothers", key: "about", n: "02" },
+  { to: "/#about", label: "About", key: "about", n: "10+" },
   { to: "/archive", label: "Archive", key: "archive", n: "212" },
   { to: "/#journal", label: "Journal", key: "journal", n: "-" },
   { to: "/contact", label: "Contact", key: "contact", n: "" },
@@ -105,7 +105,7 @@ export function Nav({ active = "residences" }) {
         </div>
 
         <div className="nav-menu-foot">
-          <span>EstateBrothers (Pvt.) Ltd · ISB · LHR · KHI</span>
+          <span>Estate Brothers · DHA Phase 6 Lahore · 4 branches</span>
           <Link to="/contact" className="cta" onClick={() => setOpen(false)}>
             Private Inquiry →
           </Link>

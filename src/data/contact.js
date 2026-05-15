@@ -1,16 +1,19 @@
 export const inquiryIntents = ["Buying", "Selling", "Advisory", "Valuation"];
 
-export const inquiryCities = ["Islamabad", "Lahore", "Karachi", "Anywhere in Pakistan"];
+export const inquiryCities = ["Lahore", "Islamabad", "Karachi", "Anywhere in Pakistan"];
 
 export const offices = [
-  { city: "Islamabad", addr: "12 Khayaban-e-Iqbal, F-7 Markaz, 44000\n+92 51 555 0117" },
-  { city: "Lahore", addr: "8-C Khayaban-e-Firdousi, Gulberg V, 54660\n+92 42 555 0118" },
-  { city: "Karachi", addr: "21 Khayaban-e-Saadi, Bath Island, 75600\n+92 21 555 0119" },
+  {
+    city: "Main DHA Office",
+    addr: "Top Floor 44-A Main DHA Office Phase 6, Lahore, Pakistan, 54000\n0325 2222330",
+  },
+  { city: "Branch Network", addr: "4 branches serving clients across Pakistan\n30+ professionals" },
+  { city: "Online", addr: "estatebrothers786@gmail.com\nInstagram: estatebrothers1" },
 ];
 
 export const officeHours = [
-  ["Mon - Thu", "10:00 - 19:00 PKT"],
-  ["Friday", "10:00 - 13:00 PKT"],
-  ["Saturday", "By appointment"],
-  ["Sunday", "Closed"],
+  ["Availability", "Always open"],
+  ["Main office", "DHA Phase 6 Lahore"],
+  ["Team", "30+ professionals"],
+  ["Support", "24/7"],
 ];

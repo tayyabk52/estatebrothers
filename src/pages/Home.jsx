@@ -11,23 +11,9 @@ function Hero() {
     <section className="hero">
       <div className="hero-stage">
         <div className="hero-img" style={{ backgroundImage: `url(${heroImage})` }} />
-        <div className="hero-tag">
-          <span className="dot" />
-          <span>FEATURED - Mandate 01 / 2026</span>
-          <span className="ph-note">(image placeholder · drop hero photo here)</span>
-        </div>
-        <div className="hero-photo-caption">
-          PHOTOGRAPH SPEC
-          <br />
-          Modernist villa · F-7 Islamabad
-          <br />
-          Marble + fair-face concrete
-          <br />
-          Margalla Hills · golden hour
-        </div>
         <div className="hero-content">
           <div className="eyebrow-w">
-            <span>Pakistan · Considered residences</span>
+            <span>Pakistan · Real estate and investment services</span>
           </div>
           <h1>
             Land, light, <span className="serif-i">and</span>
@@ -37,8 +23,8 @@ function Hero() {
             worth waiting for.
           </h1>
           <p className="lede">
-            A two-person practice representing architecturally significant residences across DHA
-            Karachi, Phase 6 Lahore, and the F-sectors of Islamabad. By referral, by appointment.
+            Estate Brothers helps clients buy, sell, and invest with confidence through trusted
+            guidance, secure opportunities, and a professional team available around the clock.
           </p>
         </div>
       </div>
@@ -242,25 +228,25 @@ function Narrative() {
       <div className="wrap">
         <div className="col-l reveal">
           <div className="img">
-            <span className="ph">PORTRAIT - Hassan &amp; Bilal Hashmi, Lahore office</span>
+            <span className="ph">CEO - Tajamal Hussain, Estate Brothers</span>
           </div>
         </div>
         <div className="col-r reveal">
-          <div className="eyebrow">The Brothers · since 2014</div>
+          <div className="eyebrow">Leadership · 10+ years of experience</div>
           <h2>
-            Our father built a house in F-6 in 1979.{" "}
-            <span className="serif-i">We still live in it.</span>
+            Built on trust, expertise, and results.{" "}
+            <span className="serif-i">Led by Tajamal Hussain.</span>
           </h2>
           <p>
-            EstateBrothers exists because we believe Pakistan's best houses are placed quietly,
-            between people who already know one another. We represent fewer than thirty mandates a
-            year, walk every plot twice, and refuse to photograph an interior until the right light
-            arrives.
+            With over a decade of hands-on experience in real estate, Tajamal Hussain has built a
+            strong reputation for integrity, market knowledge, and client-focused service. Estate
+            Brothers helps clients make confident property decisions through transparent guidance
+            and trusted opportunities.
           </p>
           <p className="narrative-meta">
-            Offices in Karachi (Bath Island), Lahore (Gulberg V), and Islamabad (F-7 Markaz).
-            Members of the Association of Builders &amp; Developers (ABAD) and the Pakistan Council
-            of Architects.
+            From a single vision to a growing real estate network, Estate Brothers now operates
+            from 44-A Main DHA Office Phase 6 Lahore with 4 branches, 30+ professional team members,
+            and support available 24/7.
           </p>
           <div className="signature">
             <div className="avatars">
@@ -268,8 +254,8 @@ function Narrative() {
               <div className="avatar avatar-two" />
             </div>
             <div className="who">
-              <span className="name">Hassan Hashmi &amp; Bilal Hashmi</span>
-              <span className="role">Founding Partners</span>
+              <span className="name">Tajamal Hussain</span>
+              <span className="role">Chief Executive Officer</span>
             </div>
           </div>
         </div>
