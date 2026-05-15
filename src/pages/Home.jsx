@@ -24,11 +24,24 @@ function Hero() {
             <br />
             worth waiting for.
           </h1>
-          <p className="lede">
-            Estate Brothers helps clients buy, sell, and invest with confidence through trusted
-            guidance, secure opportunities, and a professional team available around the clock.
-          </p>
+          <div className="hero-side">
+            <p className="lede">
+              Estate Brothers helps clients buy, sell, and invest with confidence through trusted
+              guidance, secure opportunities, and a professional team available around the clock.
+            </p>
+            <Link to="/buy-sell" className="hero-primary-link">
+              View Listings
+            </Link>
+          </div>
         </div>
+      </div>
+
+      <div className="hero-listings-strip">
+        <div>
+          <span className="eyebrow">Buy / Sell</span>
+          <strong>View our listings</strong>
+        </div>
+        <Link to="/buy-sell">Open inventory</Link>
       </div>
 
       <div className="hero-strip">
@@ -46,114 +59,6 @@ function Hero() {
   );
 }
 
-function SearchBar({ filters, setFilters, onOpenMobile }) {
-  const [open, setOpen] = useState(null);
-  const options = {
-    city: ["Islamabad", "Lahore", "Karachi", "Anywhere"],
-    sector: [
-      "F-6 / F-7 / E-7",
-      "DHA Phase 6 / 7 / 8 (LHR)",
-      "DHA Phase 5-8 (KHI)",
-      "Bani Gala / Chak Shahzad",
-      "Bahria / Gulberg",
-      "Any",
-    ],
-    plot: ["10 Marla", "1 Kanal", "2 Kanal", "4 Kanal+", "Any"],
-    price: ["Up to 10 Cr", "10 - 25 Cr", "25 - 50 Cr", "50 Cr+", "Any"],
-  };
-  const labels = {
-    city: "City",
-    sector: "Sector / Phase",
-    plot: "Plot size",
-    price: "Price (PKR)",
-  };
-
-  const set = (key, value) => {
-    setFilters((current) => ({ ...current, [key]: value }));
-    setOpen(null);
-  };
-
-  return (
-    <div className="search-wrap" id="search">
-      <div className="search-bar">
-        {Object.keys(labels).map((key) => (
-          <button
-            key={key}
-            type="button"
-            className="search-cell"
-            onClick={() => setOpen(open === key ? null : key)}
-          >
-            <span className="lbl">{labels[key]}</span>
-            <span className="val">
-              {filters[key]} <span className="caret">▾</span>
-            </span>
-            {open === key && (
-              <div className="search-menu">
-                {options[key].map((option) => (
-                  <div
-                    key={option}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      set(key, option);
-                    }}
-                    className={option === filters[key] ? "active" : ""}
-                  >
-                    {option}
-                  </div>
-                ))}
-              </div>
-            )}
-          </button>
-        ))}
-        <button type="button" className="search-go">
-          <span>Find a residence</span>
-          <span className="arrow">→</span>
-        </button>
-      </div>
-      <div className="search-mobile">
-        <div className="field" onClick={onOpenMobile}>
-          <span className="lbl">Find</span>
-          <span className="val">A residence</span>
-        </div>
-        <button type="button" onClick={onOpenMobile}>
-          Search
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function MobileSheet({ open, onClose, filters }) {
-  const labels = {
-    city: "City",
-    sector: "Sector / Phase",
-    plot: "Plot size",
-    price: "Price (PKR)",
-  };
-
-  return (
-    <>
-      <div className={`sheet-bg${open ? " open" : ""}`} onClick={onClose} />
-      <div className={`sheet${open ? " open" : ""}`}>
-        <div className="sheet-hd">
-          <h3>Find a residence</h3>
-          <button type="button" className="sheet-close" onClick={onClose}>
-            Close ×
-          </button>
-        </div>
-        {Object.keys(labels).map((key) => (
-          <div className="sheet-field" key={key}>
-            <span className="lbl">{labels[key]}</span>
-            <span className="val">{filters[key]}</span>
-          </div>
-        ))}
-        <button type="button" className="sheet-go" onClick={onClose}>
-          View 4 properties →
-        </button>
-      </div>
-    </>
-  );
-}
 
 function PropertyRow({ property }) {
   return (
@@ -324,29 +229,15 @@ function Testimonial() {
 }
 
 export function Home() {
-  const [filters, setFilters] = useState({
-    city: "Islamabad",
-    sector: "F-6 / F-7 / E-7",
-    plot: "1 Kanal",
-    price: "25 - 50 Cr",
-  });
-  const [sheetOpen, setSheetOpen] = useState(false);
-
   usePageEffects();
 
   return (
     <Layout active="home">
       <Hero />
-      <SearchBar
-        filters={filters}
-        setFilters={setFilters}
-        onOpenMobile={() => setSheetOpen(true)}
-      />
       <PartnersCarousel />
       <Featured />
       <Narrative />
       <Testimonial />
-      <MobileSheet open={sheetOpen} onClose={() => setSheetOpen(false)} filters={filters} />
     </Layout>
   );
 }

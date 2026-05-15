@@ -1,74 +1,32 @@
 import { Link } from "react-router";
 
-const footerColumns = [
-  {
-    h: "Properties",
-    items: [
-      ["Current listings", "04", "/#listings"],
-      ["Buy/Sell inventory", "08", "/buy-sell"],
-      ["Investment options", "18", "/contact"],
-      ["All properties", "∞", "/buy-sell"],
-    ],
-  },
-  {
-    h: "Company",
-    items: [
-      ["About Estate Brothers", "", "/about"],
-      ["Investment services", "", "/contact"],
-      ["Updates", "", "/#journal"],
-      ["Recognition", "", "/#"],
-    ],
-  },
-  {
-    h: "Contact",
-    items: [
-      ["Contact us", "", "/contact"],
-      ["DHA Phase 6 Lahore", "", "/contact"],
-      ["Always open", "", "/contact"],
-      ["estatebrothers1", "", "/contact"],
-    ],
-  },
-];
-
 export function Footer() {
   return (
     <footer className="footer" id="contact-footer">
-      <div className="wrap">
-        <div className="col-brand">
+      <div className="wrap footer-simple">
+        <div className="footer-brand">
           <div className="mark">
             Estate<span className="amp">&amp;</span>Brothers
           </div>
-          <p>
-            Trusted real estate partners delivering secure investments, smart opportunities, and
-            property decisions built with confidence.
-          </p>
-          <div className="addr">
-            Top Floor 44-A Main DHA Office Phase 6
-            <br />
-            Lahore, Pakistan, 54000
-            <br />
-            <br />
-            0325 2222330
-            <br />
-            estatebrothers786@gmail.com
-          </div>
+          <p>Trusted real estate partners for buying, selling, and secure investments.</p>
         </div>
 
-        {footerColumns.map((column, index) => (
-          <div key={column.h} className={`col-list ${["col-a", "col-b", "col-c"][index]}`}>
-            <h4>{column.h}</h4>
-            {column.items.map(([text, number, href]) => (
-              <Link to={href} key={text}>
-                <span>{text}</span>
-                {number && <span className="n">{number}</span>}
-              </Link>
-            ))}
-          </div>
-        ))}
+        <nav className="footer-links" aria-label="Footer">
+          <Link to="/">Home</Link>
+          <Link to="/buy-sell">Buy/Sell</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
+
+        <div className="footer-contact">
+          <span>44-A Main DHA Office Phase 6, Lahore</span>
+          <a href="tel:+923252222330">0325 2222330</a>
+          <a href="mailto:estatebrothers786@gmail.com">estatebrothers786@gmail.com</a>
+        </div>
 
         <div className="footer-bot">
-          <span>© 2026 Estate Brothers · Real estate and investment services</span>
-          <span>Set in Inter Tight &amp; Inter</span>
+          <span>© 2026 Estate Brothers</span>
+          <span>Real estate and investment services</span>
         </div>
       </div>
     </footer>

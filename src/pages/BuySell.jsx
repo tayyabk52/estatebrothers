@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
-import { Link } from "react-router";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { FileText, Phone } from "lucide-react";
+import { Link, useNavigate } from "react-router";
 import { Layout } from "../components/Layout";
 import { getAgent, houseListings, inventoryFilters, plotListings } from "../data/inventory";
 import { usePageEffects } from "../hooks/usePageEffects";
@@ -91,9 +92,26 @@ function latestUpdatedAt(listings) {
 
 function PlotTable({ listings }) {
   const [openContactId, setOpenContactId] = useState(null);
+  const tableRef = useRef(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!openContactId) return undefined;
+
+    const closeOnOutsideClick = (event) => {
+      if (!tableRef.current?.contains(event.target)) {
+        setOpenContactId(null);
+      }
+    };
+
+    window.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => window.removeEventListener("pointerdown", closeOnOutsideClick);
+  }, [openContactId]);
+
+  const openListing = (slug) => navigate(`/buy-sell/plots/${slug}`);
 
   return (
-    <div className="inventory-table-wrap">
+    <div className="inventory-table-wrap" ref={tableRef}>
       <table className="inventory-table plots-table">
         <thead>
           <tr>
@@ -109,7 +127,15 @@ function PlotTable({ listings }) {
           {listings.map((listing) => {
             const agent = getAgent(listing.contactPersonId);
             return (
-              <tr key={listing.id}>
+              <tr
+                key={listing.id}
+                className="clickable-row"
+                tabIndex={0}
+                onClick={() => openListing(listing.slug)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") openListing(listing.slug);
+                }}
+              >
                 <td data-label="Phase">
                   <strong>{listing.phase}</strong>
                   <span>{listing.city}</span>
@@ -119,23 +145,38 @@ function PlotTable({ listings }) {
                 <td data-label="Price">{listing.price}</td>
                 <td data-label="Contact Person" className="contact-col">
                   <strong>{agent.name}</strong>
-                  <a href={`tel:${agent.phone.replace(/\s/g, "")}`}>{agent.phone}</a>
+                  <a
+                    href={`tel:${agent.phone.replace(/\s/g, "")}`}
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    {agent.phone}
+                  </a>
                 </td>
                 <td data-label="Action" className="action-cell">
-                  <button
-                    type="button"
-                    className="contact-icon-btn"
-                    aria-label={`Show contact for ${listing.phase}`}
-                    aria-expanded={openContactId === listing.id}
-                    onClick={() =>
-                      setOpenContactId((current) => (current === listing.id ? null : listing.id))
-                    }
-                  >
-                    <span>☎</span>
-                  </button>
-                  <Link to={`/buy-sell/plots/${listing.slug}`}>Details</Link>
+                  <div className="action-inline">
+                    <button
+                      type="button"
+                      className="contact-icon-btn"
+                      aria-label={`Show contact for ${listing.phase}`}
+                      aria-expanded={openContactId === listing.id}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setOpenContactId((current) => (current === listing.id ? null : listing.id));
+                      }}
+                    >
+                      <Phone size={13} strokeWidth={2.2} aria-hidden="true" />
+                    </button>
+                    <Link
+                      to={`/buy-sell/plots/${listing.slug}`}
+                      className="detail-link"
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      <FileText size={13} strokeWidth={2} aria-hidden="true" />
+                      <span>Details</span>
+                    </Link>
+                  </div>
                   {openContactId === listing.id && (
-                    <div className="row-contact-popover">
+                    <div className="row-contact-popover" onClick={(event) => event.stopPropagation()}>
                       <strong>{agent.name}</strong>
                       <span>{agent.role}</span>
                       <a href={`tel:${agent.phone.replace(/\s/g, "")}`}>{agent.phone}</a>
@@ -154,9 +195,26 @@ function PlotTable({ listings }) {
 
 function HouseTable({ listings }) {
   const [openContactId, setOpenContactId] = useState(null);
+  const tableRef = useRef(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!openContactId) return undefined;
+
+    const closeOnOutsideClick = (event) => {
+      if (!tableRef.current?.contains(event.target)) {
+        setOpenContactId(null);
+      }
+    };
+
+    window.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => window.removeEventListener("pointerdown", closeOnOutsideClick);
+  }, [openContactId]);
+
+  const openListing = (slug) => navigate(`/buy-sell/houses/${slug}`);
 
   return (
-    <div className="inventory-table-wrap">
+    <div className="inventory-table-wrap" ref={tableRef}>
       <table className="inventory-table houses-table">
         <thead>
           <tr>
@@ -172,7 +230,15 @@ function HouseTable({ listings }) {
         </thead>
         <tbody>
           {listings.map((listing) => (
-            <tr key={listing.id}>
+            <tr
+              key={listing.id}
+              className="clickable-row"
+              tabIndex={0}
+              onClick={() => openListing(listing.slug)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") openListing(listing.slug);
+              }}
+            >
               <td data-label="Property">
                 <strong>{listing.title}</strong>
                 <span>{listing.id}</span>
@@ -189,20 +255,30 @@ function HouseTable({ listings }) {
                 <span className="status-pill">{listing.status}</span>
               </td>
               <td data-label="Action" className="action-cell">
-                <button
-                  type="button"
-                  className="contact-icon-btn"
-                  aria-label={`Show contact for ${listing.title}`}
-                  aria-expanded={openContactId === listing.id}
-                  onClick={() =>
-                    setOpenContactId((current) => (current === listing.id ? null : listing.id))
-                  }
-                >
-                  <span>☎</span>
-                </button>
-                <Link to={`/buy-sell/houses/${listing.slug}`}>Details</Link>
+                <div className="action-inline">
+                  <button
+                    type="button"
+                    className="contact-icon-btn"
+                    aria-label={`Show contact for ${listing.title}`}
+                    aria-expanded={openContactId === listing.id}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setOpenContactId((current) => (current === listing.id ? null : listing.id));
+                    }}
+                  >
+                    <Phone size={13} strokeWidth={2.2} aria-hidden="true" />
+                  </button>
+                  <Link
+                    to={`/buy-sell/houses/${listing.slug}`}
+                    className="detail-link"
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    <FileText size={13} strokeWidth={2} aria-hidden="true" />
+                    <span>Details</span>
+                  </Link>
+                </div>
                 {openContactId === listing.id && (
-                  <div className="row-contact-popover">
+                  <div className="row-contact-popover" onClick={(event) => event.stopPropagation()}>
                     {(() => {
                       const agent = getAgent(listing.contactPersonId);
                       return (
