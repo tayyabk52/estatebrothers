@@ -2,27 +2,27 @@ import { Link } from "react-router";
 
 const footerColumns = [
   {
-    h: "Residences",
+    h: "Properties",
     items: [
-      ["Currently listed", "04", "/#listings"],
-      ["Recently transferred", "41", "/archive"],
-      ["Off-market mandates", "18", "/contact"],
-      ["The archive", "∞", "/archive"],
+      ["Current listings", "04", "/#listings"],
+      ["Buy/Sell inventory", "08", "/buy-sell"],
+      ["Investment options", "18", "/contact"],
+      ["All properties", "∞", "/buy-sell"],
     ],
   },
   {
-    h: "Practice",
+    h: "Company",
     items: [
-      ["About Estate Brothers", "", "/#about"],
+      ["About Estate Brothers", "", "/about"],
       ["Investment services", "", "/contact"],
-      ["The journal", "", "/#journal"],
-      ["Press & recognition", "", "/#"],
+      ["Updates", "", "/#journal"],
+      ["Recognition", "", "/#"],
     ],
   },
   {
     h: "Contact",
     items: [
-      ["Private inquiry", "", "/contact"],
+      ["Contact us", "", "/contact"],
       ["DHA Phase 6 Lahore", "", "/contact"],
       ["Always open", "", "/contact"],
       ["estatebrothers1", "", "/contact"],

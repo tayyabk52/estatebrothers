@@ -1,4 +1,4 @@
-/* Shared styles for EstateBrothers v2 pages (home, archive, contact).
+/* Shared styles for EstateBrothers v2 pages (home, buy/sell, about, contact).
    Mirrors the design tokens from EstateBrothers v2.html so the
    sub-pages stay aligned with the home page. */
 
@@ -90,22 +90,24 @@ img{display:block;max-width:100%}
 /* Hamburger */
 .nav-burger{
   display:none;
-  width:42px;height:42px;
+  width:36px;height:36px;
   align-items:center;justify-content:center;
-  border:1px solid var(--rule-strong);
-  background:transparent;
+  border:1px solid rgba(21,20,15,.22);
+  background:rgba(250,246,236,.42);
   position:relative;
-  transition:background .15s;
+  transition:background .15s,border-color .15s,transform .15s;
 }
-.nav-burger:hover{background:rgba(0,0,0,.04)}
+.nav-burger:hover{background:rgba(21,20,15,.045);border-color:rgba(21,20,15,.34)}
+.nav-burger:active{transform:scale(.96)}
 .nav-burger .bar{
-  position:absolute;left:11px;width:20px;height:1.5px;background:var(--ink);
+  position:absolute;left:9px;width:18px;height:1.5px;background:var(--ink);
+  border-radius:999px;
   transition:transform .25s, top .25s, opacity .2s;
 }
-.nav-burger .bar:nth-child(1){top:16px}
-.nav-burger .bar:nth-child(2){top:24px}
-.nav-burger.open .bar:nth-child(1){top:20px;transform:rotate(45deg)}
-.nav-burger.open .bar:nth-child(2){top:20px;transform:rotate(-45deg)}
+.nav-burger .bar:nth-child(1){top:13px}
+.nav-burger .bar:nth-child(2){top:21px}
+.nav-burger.open .bar:nth-child(1){top:17px;transform:rotate(45deg)}
+.nav-burger.open .bar:nth-child(2){top:17px;transform:rotate(-45deg)}
 
 @media (max-width:980px){
   .nav-inner{grid-template-columns:1fr auto;height:60px}

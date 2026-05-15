@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 
 const links = [
-  { to: "/#listings", label: "Residences", key: "residences", n: "04" },
-  { to: "/#about", label: "About", key: "about", n: "10+" },
-  { to: "/archive", label: "Archive", key: "archive", n: "212" },
-  { to: "/#journal", label: "Journal", key: "journal", n: "-" },
+  { to: "/", label: "Home", key: "home", n: "" },
+  { to: "/buy-sell", label: "Buy/Sell", key: "buy-sell", n: "08" },
+  { to: "/about", label: "About", key: "about", n: "10+" },
+  { to: "/#journal", label: "Updates", key: "journal", n: "-" },
   { to: "/contact", label: "Contact", key: "contact", n: "" },
 ];
 
 function isActiveLink(active, key) {
-  return active === key || (active === "residences" && key === "residences");
+  return active === key;
 }
 
 function BrandLogo() {
@@ -55,7 +55,7 @@ function BrandLogo() {
   );
 }
 
-export function Nav({ active = "residences" }) {
+export function Nav({ active = "buy-sell" }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -94,7 +94,7 @@ export function Nav({ active = "residences" }) {
 
           <div className="nav-right">
             <Link to="/contact" className="nav-btn">
-              <span>Private Inquiry</span>
+              <span>Contact Us</span>
               <span className="arrow">→</span>
             </Link>
             <button
@@ -148,7 +148,7 @@ export function Nav({ active = "residences" }) {
         <div className="nav-menu-foot">
           <span>Estate Brothers · DHA Phase 6 Lahore · 4 branches</span>
           <Link to="/contact" className="cta" onClick={() => setOpen(false)}>
-            Private Inquiry →
+            Contact Us →
           </Link>
         </div>
       </div>

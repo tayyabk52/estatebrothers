@@ -148,7 +148,7 @@ function MobileSheet({ open, onClose, filters }) {
           </div>
         ))}
         <button type="button" className="sheet-go" onClick={onClose}>
-          View 4 residences →
+          View 4 properties →
         </button>
       </div>
     </>
@@ -211,7 +211,7 @@ function Featured() {
             </h2>
           </div>
           <div className="aux">
-            <Link to="/archive">View archive →</Link>
+            <Link to="/buy-sell">View Buy/Sell →</Link>
           </div>
         </header>
         <div className="property-list">
@@ -335,7 +335,7 @@ export function Home() {
   usePageEffects();
 
   return (
-    <Layout active="residences">
+    <Layout active="home">
       <Hero />
       <SearchBar
         filters={filters}
