@@ -1,35 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
+import heroImage from "../assets/properties/hero-estatebrothers.webp";
 import { Layout } from "../components/Layout";
 import { featuredProperties, heroStats, stats, testimonials } from "../data/listings";
 import { usePageEffects } from "../hooks/usePageEffects";
 import "../styles/home.css";
 
-const heroLooks = {
-  twilight: `
-    radial-gradient(60% 50% at 78% 22%, rgba(255,230,180,.22), transparent 60%),
-    radial-gradient(80% 60% at 15% 100%, rgba(46,74,58,.55), transparent 65%),
-    linear-gradient(180deg, #c9b896 0%, #b8a583 35%, #8a7a64 60%, #4a4035 100%)`,
-  monsoon: `
-    radial-gradient(70% 60% at 50% 30%, rgba(220,225,220,.25), transparent 60%),
-    radial-gradient(80% 60% at 50% 100%, rgba(20,30,28,.55), transparent 65%),
-    linear-gradient(180deg, #a8a9a3 0%, #7e827c 45%, #3a3d38 100%)`,
-  golden: `
-    radial-gradient(70% 60% at 70% 20%, rgba(255,210,140,.4), transparent 60%),
-    radial-gradient(60% 50% at 20% 100%, rgba(80,40,20,.5), transparent 65%),
-    linear-gradient(180deg, #e8c997 0%, #c79c63 45%, #5a3a20 100%)`,
-};
-
-function Hero({ vibe = "twilight" }) {
-  useEffect(() => {
-    const heroImg = document.querySelector(".hero-img");
-    if (heroImg) heroImg.style.background = heroLooks[vibe] || heroLooks.twilight;
-  }, [vibe]);
-
+function Hero() {
   return (
     <section className="hero">
       <div className="hero-stage">
-        <div className="hero-img" />
+        <div className="hero-img" style={{ backgroundImage: `url(${heroImage})` }} />
         <div className="hero-tag">
           <span className="dot" />
           <span>FEATURED - Mandate 01 / 2026</span>
@@ -190,7 +171,8 @@ function PropertyRow({ property }) {
   return (
     <article className="property reveal" id={`p-${property.id}`}>
       <span className="idx">№ {property.id}</span>
-      <div className="img" style={{ background: property.accent }}>
+      <div className="img">
+        <img src={property.image} alt={`${property.name} exterior`} loading="lazy" />
         <span className="ph">{property.photoNote}</span>
       </div>
       <div className="info">

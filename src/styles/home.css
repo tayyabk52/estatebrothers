@@ -56,24 +56,13 @@
   .hero-stage::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(21,20,15,0) 30%, rgba(21,20,15,0) 55%, rgba(21,20,15,.55) 100%);pointer-events:none}
 
   /* Marble villa placeholder — warm masonry gradient with hint of foliage + sky */
-  .hero-img{position:absolute;inset:0;
-    background:
-      radial-gradient(60% 50% at 78% 22%, rgba(255,230,180,.22), transparent 60%),
-      radial-gradient(80% 60% at 15% 100%, rgba(46,74,58,.55), transparent 65%),
-      linear-gradient(180deg, #c9b896 0%, #b8a583 35%, #8a7a64 60%, #4a4035 100%);
-  }
+  .hero-img{position:absolute;inset:0;background-size:cover;background-position:center center;background-repeat:no-repeat}
   .hero-img::before{content:"";position:absolute;inset:0;
     background:
-      repeating-linear-gradient(0deg, transparent 0 60px, rgba(0,0,0,.05) 60px 61px),
-      repeating-linear-gradient(90deg, transparent 0 120px, rgba(0,0,0,.04) 120px 121px),
-      repeating-linear-gradient(45deg, transparent 0 22px, rgba(255,255,255,.025) 22px 23px);
+      linear-gradient(90deg, rgba(21,20,15,.58) 0%, rgba(21,20,15,.34) 32%, rgba(21,20,15,.08) 64%, rgba(21,20,15,.12) 100%),
+      linear-gradient(180deg, rgba(21,20,15,.2) 0%, rgba(21,20,15,0) 30%, rgba(21,20,15,.66) 100%);
   }
-  /* "marble facade" panels suggestion */
-  .hero-img::after{content:"";position:absolute;inset:0;
-    background:
-      linear-gradient(90deg, transparent 0 38%, rgba(0,0,0,.08) 38% 38.4%, transparent 38.4% 62%, rgba(0,0,0,.08) 62% 62.4%, transparent 62.4%);
-    opacity:.65;
-  }
+  .hero-img::after{content:"";position:absolute;inset:0;background:radial-gradient(65% 70% at 78% 45%, rgba(255,216,158,.12), transparent 58%);opacity:.9}
 
   .hero-tag{position:absolute;top:24px;left:var(--margin);z-index:3;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.86);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
   .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:#C4A66B;box-shadow:0 0 0 4px rgba(196,166,107,.18)}
@@ -175,8 +164,10 @@
   .property:last-child{border-bottom:1px solid var(--rule)}
   .property .idx{grid-column:1/2;font-family:var(--mono);font-size:11px;color:var(--ash);padding-top:6px}
   .property .img{grid-column:2/7;aspect-ratio:5/4;background:#3a342d;position:relative;overflow:hidden}
-  .property .img::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(255,255,255,.03) 14px 15px)}
-  .property .img .ph{position:absolute;left:14px;bottom:14px;color:rgba(255,255,255,.5);font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;line-height:1.5;max-width:80%}
+  .property .img img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.01);transition:transform .5s ease, filter .5s ease}
+  .property:hover .img img{transform:scale(1.045);filter:saturate(1.04) contrast(1.02)}
+  .property .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,.48) 100%);pointer-events:none}
+  .property .img .ph{position:absolute;left:14px;bottom:14px;color:rgba(255,255,255,.72);font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;line-height:1.5;max-width:80%;z-index:1;text-shadow:0 1px 12px rgba(0,0,0,.45)}
   .property .info{grid-column:7/11;padding-top:4px;display:flex;flex-direction:column;gap:12px}
   .property .info .place{font-size:var(--t-eyebrow);letter-spacing:.18em;text-transform:uppercase;color:var(--graphite);font-weight:500}
   .property .info .name{font-family:var(--display);font-size:var(--t-h3);font-weight:500;line-height:1.15;letter-spacing:-.02em;color:var(--ink);margin:0}

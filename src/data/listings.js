@@ -1,3 +1,8 @@
+import khayabanAmirImage from "../assets/properties/khayaban-e-amir-bungalow.webp";
+import khayabanShaheenImage from "../assets/properties/khayaban-e-shaheen-penthouse.webp";
+import margallaVistaImage from "../assets/properties/margalla-vista-residence.webp";
+import rawalViewImage from "../assets/properties/rawal-view-farmhouse.webp";
+
 export const featuredProperties = [
   {
     id: "01",
@@ -12,7 +17,7 @@ export const featuredProperties = [
     arch: "Coalesce Design Studio, 2023",
     status: "POSSESSION READY",
     tag: "possession",
-    accent: "linear-gradient(135deg,#d6c9ab 0%,#a89478 45%,#5e5247 100%)",
+    image: margallaVistaImage,
     photoNote: "PHOTOGRAPH - north elevation at twilight, Margalla backdrop",
   },
   {
@@ -28,7 +33,7 @@ export const featuredProperties = [
     arch: "Studio Arif Hasan, 2021",
     status: "POSSESSION READY",
     tag: "possession",
-    accent: "linear-gradient(150deg,#c9b896 0%,#9c8369 50%,#4a3f33 100%)",
+    image: khayabanAmirImage,
     photoNote: "PHOTOGRAPH - entry courtyard, jali screen, evening light",
   },
   {
@@ -44,7 +49,7 @@ export const featuredProperties = [
     arch: "AKDA, completed 2024",
     status: "POSSESSION READY",
     tag: "possession",
-    accent: "linear-gradient(165deg,#b8a995 0%,#8a7a64 60%,#3a3329 100%)",
+    image: khayabanShaheenImage,
     photoNote: "PHOTOGRAPH - south-west view, sunset over the Arabian Sea",
   },
   {
@@ -60,7 +65,7 @@ export const featuredProperties = [
     arch: "Habib Fida Ali Studio, 2019",
     status: "ALLOTMENT FILE",
     tag: "allotment",
-    accent: "linear-gradient(140deg,#bdb094 0%,#7e6e57 55%,#352e25 100%)",
+    image: rawalViewImage,
     photoNote: "PHOTOGRAPH - lake-facing terrace, olive grove, morning",
   },
 ];
