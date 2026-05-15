@@ -1,0 +1,7 @@
+node_modules
+dist
+legacy-prototype
+.env
+.env.local
+.DS_Store
+npm-debug.log*

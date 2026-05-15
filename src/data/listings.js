@@ -1,0 +1,98 @@
+export const featuredProperties = [
+  {
+    id: "01",
+    place: "Sector F-7 · Islamabad",
+    name: "Margalla Vista Residence",
+    desc: "A 1-Kanal modernist villa in white Carrara marble and fair-face concrete, sited against the Margalla Hills. Five bedrooms, basement majlis, lap pool.",
+    priceLabel: "PKR 42 Crore",
+    plot: "1 Kanal",
+    beds: 5,
+    baths: 6,
+    covered: 8200,
+    arch: "Coalesce Design Studio, 2023",
+    status: "POSSESSION READY",
+    tag: "possession",
+    accent: "linear-gradient(135deg,#d6c9ab 0%,#a89478 45%,#5e5247 100%)",
+    photoNote: "PHOTOGRAPH - north elevation at twilight, Margalla backdrop",
+  },
+  {
+    id: "02",
+    place: "DHA Phase 6 · Lahore",
+    name: "Khayaban-e-Amir Bungalow",
+    desc: "A 2-Kanal corner bungalow on Khayaban-e-Amir with a 60-ft road front. Burma teak interiors, jali-screened courtyard, separate guest wing.",
+    priceLabel: "PKR 38 Crore",
+    plot: "2 Kanal",
+    beds: 6,
+    baths: 7,
+    covered: 11400,
+    arch: "Studio Arif Hasan, 2021",
+    status: "POSSESSION READY",
+    tag: "possession",
+    accent: "linear-gradient(150deg,#c9b896 0%,#9c8369 50%,#4a3f33 100%)",
+    photoNote: "PHOTOGRAPH - entry courtyard, jali screen, evening light",
+  },
+  {
+    id: "03",
+    place: "DHA Phase 8 · Karachi",
+    name: "Khayaban-e-Shaheen Penthouse",
+    desc: "Sea-facing duplex penthouse over the Arabian Sea. Two floors, 6,200 sf interior, private terrace and plunge pool. Direct lift entry.",
+    priceLabel: "PKR 28 Crore",
+    plot: "Duplex",
+    beds: 4,
+    baths: 5,
+    covered: 6200,
+    arch: "AKDA, completed 2024",
+    status: "POSSESSION READY",
+    tag: "possession",
+    accent: "linear-gradient(165deg,#b8a995 0%,#8a7a64 60%,#3a3329 100%)",
+    photoNote: "PHOTOGRAPH - south-west view, sunset over the Arabian Sea",
+  },
+  {
+    id: "04",
+    place: "Bani Gala · Islamabad",
+    name: "Rawal View Farmhouse",
+    desc: "A 4-Kanal farmhouse retreat overlooking Rawal Lake. Lap pool, olive grove, a separate two-bedroom guesthouse, and 35 KW solar.",
+    priceLabel: "PKR 65 Crore",
+    plot: "4 Kanal",
+    beds: 7,
+    baths: 8,
+    covered: 14800,
+    arch: "Habib Fida Ali Studio, 2019",
+    status: "ALLOTMENT FILE",
+    tag: "allotment",
+    accent: "linear-gradient(140deg,#bdb094 0%,#7e6e57 55%,#352e25 100%)",
+    photoNote: "PHOTOGRAPH - lake-facing terrace, olive grove, morning",
+  },
+];
+
+export const testimonials = [
+  {
+    quote: "They walked the plot with us at sunrise and again at dusk before we made the offer. The first broker who treated a Kanal of land as a decision, not a transaction.",
+    name: "Faraz & Sana Sheikh",
+    role: "DHA Phase 6, Lahore - 2024",
+  },
+  {
+    quote: "We had been looking in F-7 for two years. EstateBrothers waited eleven months for the right corner plot, then negotiated the entire deal in one afternoon.",
+    name: "Dr. Mahnoor Qureshi",
+    role: "Sector F-7, Islamabad - 2023",
+  },
+  {
+    quote: "When the architect changed, they re-photographed the entire portfolio. That quiet attention is what makes them different in this market.",
+    name: "Omar Shahid, AIAP",
+    role: "Principal, Shahid Architects",
+  },
+];
+
+export const stats = [
+  { n: "212", unit: "+", l: "Residences placed since 2014" },
+  { n: "38", unit: "d", l: "Median days, listing to offer" },
+  { n: "96", unit: "%", l: "Closed within 4% of ask" },
+  { n: "3", unit: " cities", l: "Karachi · Lahore · Islamabad" },
+];
+
+export const heroStats = [
+  { n: "180", unit: "+", l: "Active mandates" },
+  { n: "12", unit: " yrs", l: "In partnership" },
+  { n: "1 Kanal", unit: "", l: "Minimum land standard" },
+  { n: "PKR 4-80", unit: " Cr", l: "Listing range" },
+];
