@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import heroImage from "../assets/properties/hero-estatebrothers.webp";
+import ceoImage from "../assets/team/ceo-tajamal-hussain.jpg";
 import { Layout } from "../components/Layout";
+import { PartnersCarousel } from "../components/PartnersCarousel";
 import { featuredProperties, heroStats, stats, testimonials } from "../data/listings";
 import { usePageEffects } from "../hooks/usePageEffects";
 import "../styles/home.css";
@@ -228,6 +230,7 @@ function Narrative() {
       <div className="wrap">
         <div className="col-l reveal">
           <div className="img">
+            <img src={ceoImage} alt="Tajamal Hussain, Chief Executive Officer of Estate Brothers" loading="lazy" />
             <span className="ph">CEO - Tajamal Hussain, Estate Brothers</span>
           </div>
         </div>
@@ -339,6 +342,7 @@ export function Home() {
         setFilters={setFilters}
         onOpenMobile={() => setSheetOpen(true)}
       />
+      <PartnersCarousel />
       <Featured />
       <Narrative />
       <Testimonial />
