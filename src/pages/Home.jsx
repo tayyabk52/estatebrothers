@@ -15,19 +15,20 @@ function Hero() {
         <div className="hero-img" style={{ backgroundImage: `url(${heroImage})` }} />
         <div className="hero-content">
           <div className="eyebrow-w">
-            <span>Pakistan · Real estate and investment services</span>
+            <span>Estate Brothers · Real estate and investment services</span>
           </div>
           <h1>
-            Land, light, <span className="serif-i">and</span>
+            Estate Brothers
             <br />
-            the houses
+            real estate,
             <br />
-            worth waiting for.
+            <span className="serif-i">built on</span> trust.
           </h1>
           <div className="hero-side">
             <p className="lede">
-              Estate Brothers helps clients buy, sell, and invest with confidence through trusted
-              guidance, secure opportunities, and a professional team available around the clock.
+              Buy, sell, and invest with a professional property team in Lahore. From DHA listings
+              to secure investment opportunities, Estate Brothers keeps every decision clear,
+              practical, and client-focused.
             </p>
             <Link to="/buy-sell" className="hero-primary-link">
               View Listings
@@ -241,3 +242,4 @@ export function Home() {
     </Layout>
   );
 }
+

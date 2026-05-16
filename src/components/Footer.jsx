@@ -15,6 +15,7 @@ export function Footer() {
           <Link to="/">Home</Link>
           <Link to="/buy-sell">Buy/Sell</Link>
           <Link to="/about">About</Link>
+          <Link to="/updates">Updates</Link>
           <Link to="/contact">Contact</Link>
         </nav>
 

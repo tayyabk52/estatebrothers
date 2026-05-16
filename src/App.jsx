@@ -4,6 +4,7 @@ import { BuySell } from "./pages/BuySell";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { ListingDetail } from "./pages/ListingDetail";
+import { Updates } from "./pages/Updates";
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
       <Route path="buy-sell/:listingType/:slug" element={<ListingDetail />} />
       <Route path="archive" element={<BuySell />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="updates" element={<Updates />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );
