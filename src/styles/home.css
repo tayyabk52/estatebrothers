@@ -87,7 +87,7 @@
   .hero-listings-strip a:hover{background:var(--accent)}
 
   .hero-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--rule);background:var(--bone)}
-  .hero-strip .cell{padding:22px var(--margin) 22px 0;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:4px}
+  .hero-strip .cell{padding:22px 18px;border-right:1px solid var(--rule);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;min-height:96px}
   .hero-strip .cell:first-child{padding-left:var(--margin)}
   .hero-strip .cell:last-child{border-right:0;padding-right:var(--margin)}
   .hero-strip .cell .n{font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:-.02em;color:var(--ink);line-height:1}
@@ -109,7 +109,7 @@
     .hero-tag{left:var(--margin)}
     .hero-photo-caption{right:var(--margin);display:none}
     .hero-strip{grid-template-columns:1fr 1fr}
-    .hero-strip .cell{padding:18px 16px;border-right:1px solid var(--rule)}
+    .hero-strip .cell{padding:18px 16px;border-right:1px solid var(--rule);min-height:90px}
     .hero-strip .cell:nth-child(2n){border-right:0}
     .hero-strip .cell:nth-child(-n+2){border-bottom:1px solid var(--rule)}
     .hero-strip .cell:first-child{padding-left:var(--margin)}
