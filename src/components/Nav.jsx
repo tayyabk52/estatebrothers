@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
+import headerLogo from "../assets/brand/headerlogo.svg";
 
 const links = [
   { to: "/", label: "Home", key: "home", n: "" },
@@ -15,42 +16,8 @@ function isActiveLink(active, key) {
 
 function BrandLogo() {
   return (
-    <span className="brand-logo" aria-hidden="true">
-      <svg viewBox="0 0 430 116" role="img" focusable="false">
-        <g className="brand-logo-mark">
-          <path d="M26 57c24-2 31-24 48-40" />
-          <path d="M42 71c20-3 29-19 42-34" />
-          <path d="M118 17c17 16 24 38 48 40" />
-          <path d="M108 37c13 15 22 31 42 34" />
-          <path d="M31 84c31-5 44-15 61-29" />
-          <path d="M145 84c-31-5-44-15-61-29" />
-          <circle cx="88" cy="54" r="35" />
-          <path d="M66 30c5-8 12-13 22-13s17 5 22 13" />
-          <path d="M67 79c5 8 12 12 21 12s16-4 21-12" />
-          {Array.from({ length: 11 }).map((_, index) => {
-            const angle = (-70 + index * 14) * (Math.PI / 180);
-            return (
-              <circle
-                key={index}
-                cx={88 + Math.cos(angle) * 45}
-                cy={54 + Math.sin(angle) * 45}
-                r="2.7"
-              />
-            );
-          })}
-          <text x="88" y="67" textAnchor="middle">
-            EB
-          </text>
-        </g>
-        <g className="brand-logo-type">
-          <text x="184" y="54" className="brand-logo-name">
-            Estate Brothers
-          </text>
-          <text x="186" y="83" className="brand-logo-tagline">
-            Reliable real estate solutions
-          </text>
-        </g>
-      </svg>
+    <span className="brand-logo">
+      <img src={headerLogo} alt="Estate Brothers" />
     </span>
   );
 }
